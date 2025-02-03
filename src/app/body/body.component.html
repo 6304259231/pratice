@@ -1,0 +1,18 @@
+<section style="width: 100%;">
+    <div style="text-align: center;">
+        <input type="checkbox" name="Pending" id="pending" (change)="statusUpdate('pending')"> Pending
+        <input type="checkbox" name="completed" id="completed" (change)="statusUpdate('completed')"> completed
+    </div>
+   
+    <input type="text" name="todo-title" [(ngModel)]="ipText">
+    <button (click)="addtask()">Add task</button>
+    <div *ngFor="let d of data">
+        <!-- Display only items matching the selected status -->
+        <div *ngIf="status === 'all' || d.status === status" style="display: flex; justify-content: center; gap: 2rem">
+          <div>
+            <p> Task : {{ d.name }}</p>
+            <p>Status : {{ d.status }}</p>
+          </div>
+        </div>
+    </div>
+</section>

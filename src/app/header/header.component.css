@@ -1,0 +1,17 @@
+nav {
+    display: flex;
+    gap: 2.5rem;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+}
+#nav-items{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+}
+
+#nav-items p {
+    margin-left: 1.2rem;
+    color: #fff;
+}
